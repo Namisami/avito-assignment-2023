@@ -10,8 +10,8 @@ import CloneIcon from '../Icons/CloneIcon';
 
 const Navbar = () => {
   return (
-    <Container>
-      <div className='navbar'>
+    <div className='navbar'>
+      <Container>
         <div className="navbar__route">
           <a href="#" className='navbar__logo'>
             <img src={ logo } alt="Free-To-Play Games logotype" />
@@ -55,8 +55,8 @@ const Navbar = () => {
             Join Free
           </Button>
         </div>
-      </div>
-    </Container>
+      </Container>
+    </div>
   )
 }
 
