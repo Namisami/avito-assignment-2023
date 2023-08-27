@@ -1,0 +1,43 @@
+.navbar {
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(255,255,255,.5);
+  fill: rgba(255,255,255,.5);
+}
+.navbar__route {
+  display: flex;
+  align-items: center;
+}
+.navbar__account {
+  display: flex ;
+  align-items: center;
+}
+.navbar__logo {
+  padding: 4px 16px;
+}
+.navbar__menu {
+  display: flex;
+  margin-bottom: 2px;
+  align-items: center;
+}
+.navbar__item {
+  margin: auto 8px;
+}
+.navbar__button, .navbar__dropdown {
+  display: flex;
+  align-items: center;
+}
+.navbar__icon:not(.navbar__icon--more) {
+  padding: 0 8px;
+}
+.navbar__icon {
+  padding-top: 3px;
+}
+.navbar__login {
+  margin: auto 8px;
+}
+.navbar__signup {
+  margin-left: 8px;
+}

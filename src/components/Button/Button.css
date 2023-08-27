@@ -1,0 +1,11 @@
+.button {
+  cursor: pointer;
+}
+.button--info {
+  color: #4799eb; 
+}
+.button--outline {
+  padding: 12px 16px;
+  border: 1px solid;
+  border-radius: 5px;
+}
