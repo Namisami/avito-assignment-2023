@@ -1,3 +1,30 @@
 :root {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  color: rgba(255,255,255,.5);
+  fill: rgba(255,255,255,.5);
+}
+html, body {
+  height: 100%;
+}
+h1 {
+  font-size: 2.04375rem;
+  margin-bottom: 0.5rem;
+  color: #aaa;
+  font-weight: 510;
+}
+body {
+  padding-top: 55px;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+main {
+  flex: 1 0 auto;
+  background: #272b30;
+  width: 100%;
+}
+footer {
+  flex: 0 0 auto;
 }

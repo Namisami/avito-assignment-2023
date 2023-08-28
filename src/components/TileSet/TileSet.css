@@ -1,0 +1,28 @@
+.tileset {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+.tile {
+  background: #32383e;
+  border-radius: 5px;
+}
+.tile__image {
+  border-radius: 5px 5px 0 0;
+  padding: 0 1px;
+}
+.tile__info {
+  padding: 0.25rem 1rem 1rem 1rem;
+}
+.tile__title, .tile__description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tile__title {
+  font-size: 1.20625rem;
+  margin-bottom: 0.25rem;
+  font-weight: 510;
+}
+.tile__description {
+}
