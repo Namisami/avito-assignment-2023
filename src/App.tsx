@@ -1,9 +1,10 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchGamesList } from '@store/slices/gamesSlice'
 import Navbar from '@components/Navbar/Navbar'
 import Container from '@components/Container/Container'
 import TileSet from '@components/TileSet/TileSet'
+import Filters from '@components/Filters/Filters'
 import type { TypedUseSelectorHook } from 'react-redux'
 import type { AppDispatch, RootState } from '@store/index.ts'
 import './App.css'
@@ -14,6 +15,12 @@ export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector
 function App() {
   const games = useAppSelector((state) => state.value)
   const dispatch = useAppDispatch()
+
+  // const [filters, setFilters] = useState({
+  //   platform: '',
+  //   genre: '',
+  //   sort: '',
+  // })
 
   useEffect(() => {
     dispatch(fetchGamesList())
@@ -28,7 +35,12 @@ function App() {
       <main className='main'>
         <Container>
           <h1 className='main__title'>Browse for Games!</h1>
-          <TileSet items={ games.slice(0, 10) }/>
+          <Filters>
+            <Filters.Platform />
+            <Filters.Genre />
+            <Filters.Sort />
+          </Filters>
+          <TileSet items={ games }/>
         </Container>
       </main>
       <footer></footer>

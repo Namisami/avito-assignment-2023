@@ -12,7 +12,7 @@ export interface TileSetProps {
 const TileSet = ({
   items,
 }: TileSetProps) => {
-  const tiles = items.map(item => {
+  const tiles = items?.map(item => {
     return (
       <div className='tileset__tile tile' key={ item.id }>
         <img className='tile__image' src={ item.thumbnail } alt={ item.short_description } />
@@ -25,7 +25,7 @@ const TileSet = ({
   })
   return (
     <div className="tileset">
-      { tiles }
+      { tiles ? tiles : 'По вашему запросу ничего не найдено' }
     </div>
   )
 }
