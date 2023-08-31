@@ -7,11 +7,16 @@
 html, body {
   height: 100%;
 }
-h1 {
-  font-size: 2.04375rem;
+h1, h2, h3, h4, h5 {
   margin-bottom: 0.5rem;
   color: #aaa;
   font-weight: 510;
+}
+h1 {
+  font-size: 2.04375rem;
+}
+h2 {
+  font-size: 1.540625rem;
 }
 body {
   padding-top: 55px;

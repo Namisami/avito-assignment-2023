@@ -18,14 +18,9 @@ export interface FiltersContextType {
 
 export const FiltersContext = createContext<FiltersContextType>({} as FiltersContextType);
 
-export interface FiltersProps extends React.PropsWithChildren {
-  // onFiltersChange: (filter: FilterValuesType) => void
-}
-
 const Filters = ({
   children,
-  // onFiltersChange
-}: FiltersProps) => {
+}: React.PropsWithChildren) => {
   const dispatch = useAppDispatch()
 
   const [filterValues, setFilterValues] = useState<FilterValuesType>({
@@ -35,7 +30,6 @@ const Filters = ({
   })
   useEffect(() => {
     dispatch(fetchGamesListWithParametres(filterValues))
-    // onFiltersChange(filterValues)
   }, [filterValues])
   return (
     <div className='filters'>

@@ -1,0 +1,17 @@
+.error-page {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  align-items: center;
+}
+.error-page__warning {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: rgb(195, 209, 222);
+}
+.error-page__return {
+  width: max-content;
+}

@@ -13,18 +13,11 @@ export const useAppDispatch: () => AppDispatch = useDispatch
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector
 
 function App() {
-  const games = useAppSelector((state) => state.value)
+  const games = useAppSelector((state) => state.gamesList)
   const dispatch = useAppDispatch()
-
-  // const [filters, setFilters] = useState({
-  //   platform: '',
-  //   genre: '',
-  //   sort: '',
-  // })
 
   useEffect(() => {
     dispatch(fetchGamesList())
-    console.log(games)
   }, [])
 
   return (

@@ -1,4 +1,5 @@
-import './TileSet.css'
+import { Link } from 'react-router-dom';
+import './TileSet.css';
 
 export interface TileSetProps {
   items: {
@@ -14,13 +15,13 @@ const TileSet = ({
 }: TileSetProps) => {
   const tiles = items?.map(item => {
     return (
-      <div className='tileset__tile tile' key={ item.id }>
+      <Link className='tileset__tile tile' key={ item.id } to={ `games/${item.id}` }>
         <img className='tile__image' src={ item.thumbnail } alt={ item.short_description } />
         <div className="tile__info">
           <p className='tile__title'>{ item.title }</p>
           <p className='tile__description'>{ item.short_description }</p>
         </div>
-      </div>
+      </Link>
     )
   })
   return (

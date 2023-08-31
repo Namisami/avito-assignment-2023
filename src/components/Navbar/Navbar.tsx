@@ -1,21 +1,22 @@
+import { Link } from 'react-router-dom'
 import Button from '@components/Button/Button';
 import Dropdown from '@components/Dropdown/Dropdown';
 import MoreIcon from '@components/Icons/MoreIcon';
 import Container from '@components/Container/Container';
+import SearchIcon from '@components/Icons/SearchIcon';
+import GiftIcon from '@components/Icons/GiftIcon';
+import CloneIcon from '@components/Icons/CloneIcon';
 import logo from '@assets/freetogame-logo.png'
 import './Navbar.css';
-import SearchIcon from '../Icons/SearchIcon';
-import GiftIcon from '../Icons/GiftIcon';
-import CloneIcon from '../Icons/CloneIcon';
 
 const Navbar = () => {
   return (
     <div className='navbar'>
       <Container>
         <div className="navbar__route">
-          <a href="#" className='navbar__logo'>
+          <Link to={ '/' } className='navbar__logo'>
             <img src={ logo } alt="Free-To-Play Games logotype" />
-          </a>
+          </Link>
           <nav className='navbar__nav'>
             <ul className='navbar__menu'>
               <li className="navbar__item">
