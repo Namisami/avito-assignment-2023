@@ -1,16 +1,26 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { createAsyncThunk } from '@reduxjs/toolkit'
 import axios from "axios";
-import { Platforms } from "@types/Platforms";
-import { Genres } from "@types/Genres";
-import { Sorts } from "@types/Sorts";
+import { Platforms } from "@/types/Platforms";
+import { Genres } from "@/types/Genres";
+import { Sorts } from "@/types/Sorts";
 
 interface gamesState {
   gamesListError: {}
   gamesList: []
   gameInfoError: {}
   gameInfoIsLoading: boolean
-  gameInfo: {}
+  gameInfo: {
+    screenshots?: []
+    minimum_system_requirements?: {}
+    thumbnail?: string
+    release_date?: any
+    developer?: string
+    publisher?: string
+    genre?: string
+    title?: string
+    description?: string
+  }
 }
 
 const initialState: gamesState = {

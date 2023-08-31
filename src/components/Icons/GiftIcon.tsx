@@ -1,4 +1,4 @@
-import { Icon } from "@types/Icon"
+import { Icon } from "../../types/Icon"
 
 const GiftIcon = ({
   width=24, height=24

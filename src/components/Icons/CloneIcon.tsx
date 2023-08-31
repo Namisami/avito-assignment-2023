@@ -1,4 +1,4 @@
-import { Icon } from "@types/Icon"
+import { Icon } from "../../types/Icon"
 
 const CloneIcon = ({
   width=18, height=18

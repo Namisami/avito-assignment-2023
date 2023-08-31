@@ -12,7 +12,7 @@ const Carousel = ({
 }: CarouselProps) => {
   const [current, setCurrent] = useState(1)
 
-  const images = items.map((item: string, index) => {
+  const images = items.map((item: string) => {
     return (
       <img className='carousel__item' src={ item } key={ item } />
     )

@@ -6,7 +6,7 @@ import Container from '@components/Container/Container';
 import Carousel from '@components/Carousel/Carousel';
 import Loader from '@components/Loader/Loader';
 import Error from '@components/Error/Error';
-import { RootState } from '@store';
+import { RootState } from '@/store';
 import { fetchGameById, setGameInfo } from '@store/slices/gamesSlice';
 import './Game.css';
 
@@ -44,7 +44,7 @@ const Game = () => {
       return (
         <div className='table__item' key={ key }>
           <p className='table__title'>{ key.toLocaleUpperCase() }</p>
-          <p className='table__value'>{ gameInfo.minimum_system_requirements[key] }</p>
+          <p className='table__value'>{ (gameInfo.minimum_system_requirements as any)[key] }</p>
         </div>
       )
   }) : (

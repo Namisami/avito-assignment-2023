@@ -1,4 +1,4 @@
-import { Icon } from "@types/Icon"
+import { Icon } from "@/types/Icon"
 
 const SearchIcon = ({
   width=20, height=20
