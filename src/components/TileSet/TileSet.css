@@ -15,6 +15,7 @@
 }
 .tile__image {
   border-radius: 5px 5px 0 0;
+  width: 100%;
   padding: 0 1px;
 }
 .tile__info {
@@ -30,5 +31,21 @@
   margin-bottom: 0.25rem;
   font-weight: 510;
 }
-.tile__description {
+@media screen and (max-width: 1250px) {
+  .tileset {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .tileset {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .tileset {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 15px;
+  }
 }

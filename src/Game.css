@@ -1,11 +1,15 @@
 .game {
   display: flex;
   position: relative;
+  gap: 5px;
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
 .game__left {
   flex: 1;
+}
+.game__image {
+  width: 100%;
 }
 .game__right {
   flex: 2;
@@ -33,4 +37,33 @@
 }
 .table__value {
   color: rgb(224, 230, 236);
+}
+@media screen and (max-width: 700px) {
+  .game {
+    flex-direction: column-reverse;
+  }
+  .game__title {
+    text-align: center;
+  }
+  .game__image {
+    position: absolute;
+    height: 200px;
+    width: auto;
+    top: 0;
+  }
+  .game__right {
+    margin-top: 200px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .game__image {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .game__return {
+    top: 200px;
+  }
+  .game__right {
+    margin-top: 230px;
+  }
 }
