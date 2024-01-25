@@ -49,7 +49,7 @@ export const fetchGamesListWithParametres = createAsyncThunk(
   async (params: {platform: string, genre: string, sort: string}) => {
     try {
       const { data } = await axios
-        .get(`https://justcors.com/tl_02a0890/https://www.freetogame.com/api/games?platform=${Platforms[params.platform as keyof typeof Platforms]}&sort-by=${Sorts[params.sort as keyof typeof Sorts]}${Genres[params.genre as keyof typeof Genres] ? `&category=${Genres[params.genre as keyof typeof Genres]}` : ''}`)
+        .get(`https://justcors.com/tl_688561e/https://www.freetogame.com/api/games?platform=${Platforms[params.platform as keyof typeof Platforms]}&sort-by=${Sorts[params.sort as keyof typeof Sorts]}${Genres[params.genre as keyof typeof Genres] ? `&category=${Genres[params.genre as keyof typeof Genres]}` : ''}`)
       return data
     } catch (error) {
       return error
@@ -62,7 +62,7 @@ export const fetchGameById = createAsyncThunk(
   async (gameId: string) => {
     try {
       const { data } = await axios
-        .get(`https://justcors.com/tl_02a0890/https://www.freetogame.com/api/game?id=${gameId}`)
+        .get(`https://justcors.com/tl_688561e/https://www.freetogame.com/api/game?id=${gameId}`)
       return data
     } catch (error) {
       return error
@@ -113,10 +113,15 @@ const gamesSlice = createSlice({
       state.gameInfoIsLoading = true
     })
     builder.addCase(fetchGameById.fulfilled, (state, action) => {
-      if (action.payload) {
-        state.gameInfo = action.payload
+      console.log(action.payload)
+      if (action.payload.message === 'Network Error') {
+        state.gameInfoError = action.payload;
       } else {
-        state.gameInfoError = {'error': 'Something goes wrong!'}
+        if (action.payload) {
+          state.gameInfo = action.payload
+        } else {
+          state.gameInfoError = {'error': 'Something goes wrong!'}
+        }
       }
       state.gameInfoIsLoading = false
     })
