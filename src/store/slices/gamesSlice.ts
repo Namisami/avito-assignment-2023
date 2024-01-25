@@ -36,7 +36,7 @@ export const fetchGamesList = createAsyncThunk(
   async () => {
     try {
       const { data } = await axios
-        .get("https://justcors.com/tl_02a0890/https://www.freetogame.com/api/games")
+        .get("https://justcors.com/tl_688561e/https://www.freetogame.com/api/games")
       return data
     } catch (error) {
       return error
