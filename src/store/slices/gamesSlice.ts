@@ -36,7 +36,7 @@ export const fetchGamesList = createAsyncThunk(
   async () => {
     try {
       const { data } = await axios
-        .get("https://justcors.com/tl_688561e/https://www.freetogame.com/api/games")
+        .get("https://thingproxy.freeboard.io/fetch/https://www.freetogame.com/api/games")
       return data
     } catch (error) {
       return error
@@ -49,7 +49,7 @@ export const fetchGamesListWithParametres = createAsyncThunk(
   async (params: {platform: string, genre: string, sort: string}) => {
     try {
       const { data } = await axios
-        .get(`https://justcors.com/tl_688561e/https://www.freetogame.com/api/games?platform=${Platforms[params.platform as keyof typeof Platforms]}&sort-by=${Sorts[params.sort as keyof typeof Sorts]}${Genres[params.genre as keyof typeof Genres] ? `&category=${Genres[params.genre as keyof typeof Genres]}` : ''}`)
+        .get(`https://thingproxy.freeboard.io/fetch/https://www.freetogame.com/api/games?platform=${Platforms[params.platform as keyof typeof Platforms]}&sort-by=${Sorts[params.sort as keyof typeof Sorts]}${Genres[params.genre as keyof typeof Genres] ? `&category=${Genres[params.genre as keyof typeof Genres]}` : ''}`)
       return data
     } catch (error) {
       return error
@@ -62,7 +62,7 @@ export const fetchGameById = createAsyncThunk(
   async (gameId: string) => {
     try {
       const { data } = await axios
-        .get(`https://justcors.com/tl_688561e/https://www.freetogame.com/api/game?id=${gameId}`)
+        .get(`https://thingproxy.freeboard.io/fetch/https://www.freetogame.com/api/game?id=${gameId}`)
       return data
     } catch (error) {
       return error
