@@ -1,1 +1,1 @@
-/src/* https://thingproxy.freeboard.io/fetch/:splat 200
+/api/* https://thingproxy.freeboard.io/fetch/:splat 200
