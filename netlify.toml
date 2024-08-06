@@ -1,5 +1,5 @@
 [[redirects]]
-from = "/api/*"
+from = "/https://www.freetogame.com/api/*"
 to = "https://thingproxy.freeboard.io/fetch/:splat"
 status = 200
 force = true
